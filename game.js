@@ -10,30 +10,37 @@ var draws = document.getElementById("draws")
 myRock.addEventListener("click", function() {
   console.log('Hit') 
   game()
+  userdisplay.innerHTML = 'Rock'
 })
 myPaper.addEventListener("click", function() {
   console.log('Crumble')
   game()
+  userdisplay.innerHTML = 'Paper'
 })
 myScissors.addEventListener("click", function() {
   console.log('Cut')
   game()
+  userdisplay.innerHTML = 'Scissors'
 })
+
 
 function game() {
   let comMove = Math.random();
   if (comMove <=0.33) { comMove = "Rock";}
   else if (comMove <= 0.67) {comMove = "Paper";}
   else { comMove = "Scissors";}
-  comdisplay.innerHTML = comMove
+  comdisplay.innerHTML = comMove 
 }
 
-function user()
-let userMove = userdisplay();
-if (userMove = comMove) { draws = draws++} {
+// let game
+
+
+// function user()
+// let userMove = userdisplay();
+// if (userMove = comMove) { draws = draws++} {
   
-  userdisplay.draws.innerHTML = userMove.draws
-}
+//   userdisplay.draws.innerHTML = userMove.draws
+// }
 
 
 

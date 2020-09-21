@@ -8,13 +8,21 @@
 </head>
 <h1>ROCK, PAPER, SCISSORS!</h1>
 
-<div>
-  <h2> Computer's Move</h2>
-    <div id="comdisplay"></div>
-</div>
-
 <body>
-  <h3>Your Move<h3>
+  <divcom>
+    <h2>Computer</h2>
+    <p>Computer's Move =</p>
+    <div id="comdisplay"></div>
+    <p>Your Draws =
+      <scorecom>
+        <p><span id="draws">needed value</span>
+        <p>Your Wins =</p><span id="Wins">value</span>
+        <p>Your losses =</p><span id="losses">value</span>
+      </scorecom>
+  </divcom>
+
+  <divplayer>
+    <h2>Player</h2>
     <div id="userdisplay"></div>
       <button id="r">Select Rock</button>
     <br>
@@ -22,9 +30,12 @@
     <br>
       <button id="s">Select Scissors</button>
     <br>
-    <score>
-      <p> Draws = <p> <span id ="draws"></span>
-    </score>
+    <scoreplayer>
+      <p>Your Draws =<p><span id ="draws">needed value</span>
+      <p>Your Wins =</p><span id="Wins">value</span>
+      <p>Your losses =</p><span id="losses">value</span>
+    </scoreplayer>
+  </divplayer>
 </body>
 <script src="game.js"></script>
 </html>

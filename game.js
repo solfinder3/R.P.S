@@ -32,10 +32,16 @@ function game() {
   comdisplay.innerHTML = comMove 
 }
 
-// let game
+// function win_value()
+//   const rps_draws
+//   if comdisplay == userdisplay {
+//     const draws++
+//     draws.innerHTML = draws;
+//   }
 
 
-// function user()
+
+// let user
 // let userMove = userdisplay();
 // if (userMove = comMove) { draws = draws++} {
   

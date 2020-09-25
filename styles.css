@@ -10,7 +10,7 @@ h3{
 }
 
 p1{
-  color:yellowgreen;
+  color: brown;
 }
 
 
@@ -20,6 +20,10 @@ divcom {
 
 divwinner {
   text-align: center;
+}
+
+divwinner.p {
+
 }
 
 divplayer {

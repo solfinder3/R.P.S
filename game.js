@@ -3,44 +3,32 @@
   var myScissors = document.getElementById("s");
   var comDisplay = document.getElementById("comdisplay");
   var userDisplay = document.getElementById("userdisplay");
-var wins = document.getElementById("wins");
-var losses = document.getElementById("losses");
-var draws = document.getElementById("draws");
 var inner = document.getElementById("inner");
 
 myRock.addEventListener("click", function() {
-  console.log("r") 
+  console.log("rock") 
   let c = computerChoice() 
   userDisplay.innerHTML = 'Rock'
-  let userChoice = "r"
+  let userChoice = "Rock"
   winner(c, userChoice)
 })
 myPaper.addEventListener("click", function() {
-  console.log("p")
+  console.log("paper")
   let c = computerChoice()
   userDisplay.innerHTML = 'Paper'
-  let userChoice = "p"
+  let userChoice = "Paper"
   winner(c, userChoice)
 })
 myScissors.addEventListener("click", function() {
-  console.log("s")
+  console.log("scissors")
   let c = computerChoice()
   userDisplay.innerHTML = 'Scissors'
-  let userChoice = "s"
+  let userChoice = "Scissors"
   winner(c, userChoice)
 })
 
-
-// function computerChoice() {
-//   let comMove = Math.random();
-//   if (comMove <= 0.33) { comMove = "Rock"; }
-//   else if (comMove <= 0.67) { comMove = "Paper"; }
-//   else { comMove = "Scissors"; }
-//   comdisplay.innerHTML = comMove
-// }
-
 function computerChoice() {
-  const choices = [ 'r', 'p', 's' ];
+  const choices = [ 'Rock', 'Paper', 'Scissors' ];
   const randomNumber = Math.floor(Math.random() * 3);
   comDisplay.innerHTML = choices[randomNumber]
   return choices[randomNumber];
@@ -49,68 +37,34 @@ function computerChoice() {
 
 function winner(computer, user) {
   switch ( computer + user) {
-    case "rs":
+    case "RockScissors":
       inner.innerHTML = "Computer WINS!"
-    case "pr":
+    case "PaperRock":
       inner.innerHTML = "Computer WINS!"
-    case "sp":
+    case "ScissorsPaper":
       inner.innerHTML = "Computer WINS!"
       break;
-    case 'rp':
+    case 'RockPaper':
       inner.innerHTML = "Player WINS!"
-    case 'ps':
+    case 'PaperScissors':
       inner.innerHTML = "Player WINS!"
-    case 'sr':
+    case 'ScissorsRock':
       inner.innerHTML = "Player WINS!"
       break;
-    case 'rr':
+    case 'RockRock':
       inner.innerHTML = "Draw!"
-    case 'pp':
+    case 'PaperPaper':
       inner.innerHTML = "Draw!"
-    case 'ss':
+    case 'ScissorsScissors':
       inner.innerHTML = "Draw!"
       break;
   }
 }
 
 
-
-
-//notes other way to do it...
-// function computerChoice() {
-//   let comMove = Math.random();
-//   if (comMove <= 0.33) { comMove = "Rock"; }
-//   else if (comMove <= 0.67) { comMove = "Paper"; }
-//   else { comMove = "Scissors"; }
-//   comdisplay.innerHTML = comMove
-// }
-//or
-// function getComputerChoice() {
-//   const choices =[ 'r', 'p', 's' ];
-//   console.log(Math.random()); 
-//or 
-// delete console.log(Math.random()); and put next two lines
-// const randomNumber = Math.floor(Math.random() * 3)';
-// return choices [randomNumber];
-// }
-
-
-
-// add draw 
-// winner and losser
-
-// function win_value()
-//   const rps_draws
-//   if comdisplay == userdisplay {
-//     const draws++
-//     draws.innerHTML = draws;
-//   }
-
-
-
-// let user
-// let userMove = userdisplay();
-// if (userMove = comMove) { draws = draws++} {
-  
-//   userdisplay.draws.innerHTML = userMove.draws
-// }
+{/* <scoreboard>
+  if comDisplay = case "rs", "pr", "sp"
+  then com scores 1 point
+  else
+  user = 1 point
+</scoreboard> */}

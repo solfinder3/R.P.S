@@ -5,6 +5,9 @@
   var userDisplay = document.getElementById("userdisplay");
 var inner = document.getElementById("inner");
 
+
+
+
 myRock.addEventListener("click", function() {
   console.log("rock") 
   let c = computerChoice() 
@@ -65,6 +68,6 @@ function winner(computer, user) {
 {/* <scoreboard>
   if comDisplay = case "rs", "pr", "sp"
   then com scores 1 point
-  else
+  elseif
   user = 1 point
 </scoreboard> */}
